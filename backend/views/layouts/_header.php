@@ -46,7 +46,7 @@ use backend\models\Log;
                         <?php if (Yii::$app->user->identity->userProfile->avatar_path) : ?>
                             <img src="<?= Yii::getAlias('@storageUrl/avatars/' . Yii::$app->user->identity->userProfile->avatar_path) ?>" class="user-image" alt>
                         <?php else: ?>
-                            <img src="<?= Yii::$app->homeUrl . '/static/img/default.png' ?>" class="user-image" alt>
+                            <?= Html::img('@web/static/img/default.png', ['class' => 'user-image', 'alt'=>'']) ?>
                         <?php endif ?>
                         <span class="hidden-xs"><?= Yii::$app->user->identity->username ?></span>
                     </a>
@@ -55,7 +55,7 @@ use backend\models\Log;
                             <?php if (Yii::$app->user->identity->userProfile->avatar_path) : ?>
                                 <img src="<?= Yii::getAlias('@storageUrl/avatars/' . Yii::$app->user->identity->userProfile->avatar_path) ?>" class="img-circle" alt>
                             <?php else: ?>
-                                <img src="<?= Yii::$app->homeUrl . '/static/img/default.png' ?>" class="img-circle" alt>
+                                <?= Html::img('@web/static/img/default.png', ['class' => 'img-circle"', 'alt'=>'']) ?>
                             <?php endif ?>
                             <p>
                                 <?= Yii::$app->user->identity->username ?>

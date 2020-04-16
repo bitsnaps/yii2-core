@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <?php if ($profile->avatar_path) : ?>
             <img src="<?= Yii::getAlias('@storageUrl/avatars/' . $profile->avatar_path) ?>" class="img-thumbnail" alt>
         <?php else: ?>
-            <img src="<?= Yii::$app->homeUrl . '/static/img/default.png' ?>" class="img-thumbnail" alt>
+            <?= Html::img('@web/static/img/default.png', ['class' => 'img-thumbnail', 'alt'=>'']) ?>
         <?php endif ?>
     </p>
 
